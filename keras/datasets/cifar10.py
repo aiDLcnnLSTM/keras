@@ -14,7 +14,8 @@ def load_data():
     """
     dirname = 'cifar-10-batches-py'
     origin = 'http://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz'
-    path = get_file(dirname, origin=origin, untar=True)
+    # the dirname is the extracted dir name, so the untar should be False
+    path = get_file(dirname, origin=origin, untar=False)
 
     num_train_samples = 50000
 
